@@ -3,7 +3,7 @@ import './App.css';
 
 import Btn from './Btn'
 
-function App() {
+function App2() {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
