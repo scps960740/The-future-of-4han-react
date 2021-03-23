@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
-import App from './App';
+import AppBruce from './bruce/App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppBruce a1={100} a2={200}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
