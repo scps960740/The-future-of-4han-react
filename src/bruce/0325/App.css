@@ -47,10 +47,3 @@ body {
   font-weight: 800;
   border-radius: 30px;
 }
-.boxImg {
-  width: 100px;
-  height: 100px;
-}
-.boxImg > img {
-  width: 100%;
-}

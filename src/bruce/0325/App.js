@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Circle from "./components/Circle";
+import Cross from "./components/Cross";
+
 import "./App.css";
-import cross from "./img/cross.svg";
-import circle from "./img/circle.svg";
 
 function App() {
   const [button, setButton] = useState();
@@ -12,6 +13,15 @@ function App() {
   const [putInCircle1, setPutInCircle1] = useState();
   const [putInCross1, setPutInCross1] = useState();
 
+  // const [arr , setArr] = useState([])
+  // // [false, false, false, false, false, false, false, false, false]
+  // setArr(function(prevData) {
+  //     const currentData = [...prevData]
+  //     currentData[0] = true
+  //     return currentData
+  // })
+  // const [ num, setNum ] = useState(100)
+
   function prompt() {
     setPutInCircle("");
     setPutInCross("");
@@ -21,41 +31,28 @@ function App() {
   }
 
   function circlePutIn() {
-    setPutInCircle(
-      <div className="boxImg">
-        <img src={circle}></img>
-      </div>
-    );
+    setPutInCircle(<Circle />);
     setValue(value + 1);
+    // setValue(function(prevData) {
+    //     return prevData + 1
+    // })
     console.log(value, "我是V");
   }
 
   function crossPutIn() {
-    setPutInCross(
-      <div className="boxImg">
-        <img src={cross}></img>
-      </div>
-    );
+    setPutInCross(<Cross />);
     setValue(value + 1);
     console.log(value, "我是V");
   }
 
   function circlePutIn1() {
-    setPutInCircle1(
-      <div className="boxImg">
-        <img src={circle}></img>
-      </div>
-    );
+    setPutInCircle1(<Circle />);
     setValue(value + 1);
     console.log(value);
   }
 
   function crossPutIn1() {
-    setPutInCross1(
-      <div className="boxImg">
-        <img src={cross}></img>
-      </div>
-    );
+    setPutInCross1(<Cross />);
     setValue(value + 1);
     console.log(value);
   }
@@ -110,6 +107,7 @@ function App() {
   return (
     <>
       <div className="main">
+        {/* <input type="text" value={num}/> */}
         <div onClick={onCilckTime} className="box box1 box2">
           {putInCircle}
           {putInCross}
