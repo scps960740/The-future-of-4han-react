@@ -1,0 +1,7 @@
+.boxImg {
+  width: 100px;
+  height: 100px;
+}
+.boxImg > img {
+  width: 100%;
+}
