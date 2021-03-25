@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import AppBruce from './bruce/App'
+import React from "react";
+import ReactDOM from "react-dom";
+import AppJohn from "./John/App";
+import GameResult from "./John/GameResult"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AppBruce a1={100} a2={200}/>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <AppJohn/>
+    </React.StrictMode>,
+    document.getElementById("root")
 );
