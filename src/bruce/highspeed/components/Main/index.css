@@ -1,0 +1,20 @@
+.table_th {
+  display: flex;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.table_th > div {
+  margin-left: 10px;
+}
+
+
+.table_body {
+  display: flex;
+}
+
+.table_body > div {
+  margin-left: 10px;
+  margin-top: 10px;
+}
