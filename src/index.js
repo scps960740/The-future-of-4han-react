@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AppJohn from "./bruce/0325/App";
-// import GameResult from "./John/GameResult"
+import Home from "./bruce/highspeed/pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppJohn />
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );
