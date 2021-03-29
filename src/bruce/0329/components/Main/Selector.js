@@ -9,21 +9,21 @@ const Selector = ({ setMainSearchOption }) => {
 
   const [allStation, setAllStation] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(STATION_API)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       const newdata = data.map((item) => {
-  //         return {
-  //           StationName: item.StationName.Zh_tw,
-  //           StationID: item.StationID,
-  //         };
-  //       });
-  //       setAllStation(newdata);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch(STATION_API)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const newdata = data.map((item) => {
+          return {
+            StationName: item.StationName.Zh_tw,
+            StationID: item.StationID,
+          };
+        });
+        setAllStation(newdata);
+      });
+  }, []);
 
   function dateEvent(e) {
     setDate(e.target.value);
@@ -58,16 +58,10 @@ const Selector = ({ setMainSearchOption }) => {
 
   return (
     <>
-      <div>
-        <input
-          className="box211"
-          type="date"
-          value={date}
-          onChange={dateEvent}
-        ></input>
-      </div>
-      <div>
-        <select className="box211" value={start} onChange={startEvent}>
+      <input className="box211" type="date" value={date} onChange={dateEvent} />
+      <div className="box211">
+        <select value={start} onChange={startEvent}>
+          <option value="">請選擇</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
@@ -79,8 +73,9 @@ const Selector = ({ setMainSearchOption }) => {
         </select>
       </div>
 
-      <div>
-        <select className="box211" value={end} onChange={endEvent}>
+      <div className="box211">
+        <select value={end} onChange={endEvent}>
+          <option value="">請選擇</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
