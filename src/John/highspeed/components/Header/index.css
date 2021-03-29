@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+  margin: 0;
+}
+
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70px;
+  color: black;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.boxBorder {
+  border-bottom: 1px solid #d0d4db;
+  color: #d0d4db;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.box11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  color: black;
+}
+
+.LogoWidth {
+  width: 38px;
+  height: 38px;
+}
+
+.LogoWidth > img {
+  width: 100%;
+}
+
+.box12 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 39%;
+  border-left: 1px solid #d0d4db;
+}
+.box13 {
+  display: flex;
+  width: 37%;
+  border-left: 1px solid #d0d4db;
+}
+.box14 {
+  display: flex;
+  width: 19%;
+}
+.box1Btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+  color: #d0d4db;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.box121 {
+  margin-left: 30px;
+}
+
+.box121:hover,
+.box122:hover,
+.box123:hover,
+.box124:hover {
+  color: #2221a3;
+  cursor: default;
+  border-bottom: 3px solid #2221a3;
+}
+
+.box124 {
+  margin-right: 30px;
+}
+
+.Name {
+  font-size: 20px;
+  margin-left: 130px;
+  padding-top: 22px;
+  color: black;
+}
+
+.box143 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 66%;
+  width: 13%;
+  box-sizing: border-box;
+  border-radius: 35px;
+  overflow: hidden;
+  margin-top: 13px;
+  margin-left: 50px;
+}
+.HeadWidth {
+  width: 100%;
+  height: 100%;
+}
+
+.HeadWidth > img {
+  width: 100%;
+}
+
+.RWD{
+  display: none;
+}
+.boxRWD{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid #d0d4db;
+}
+.boxRWD1{
+  width: 60px;
+}
+.boxRWD2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    color: black;
+    box-sizing: border-box;
+    padding-left: 133px;
+    font-family: "Rubik", sans-serif;
+}
+.boxRWD3{
+  box-sizing: border-box;
+  border-radius: 35px;
+  overflow: hidden;
+  width: 13%;
+  height: 48px;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+@media screen and (max-width: 765px){
+  .box1{
+    display: none;
+  }
+  .RWD{
+    display: flex;
+  }
+  .LogoWidth {
+    width: 46px;
+    height: 38px;
+    margin-top: 7px;
+    margin-left: 4px;
+  }
+}

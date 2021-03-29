@@ -3,7 +3,7 @@ import React from "react";
 const Search = () => {
   return (
     <div>
-      <input type="text" placeholder="請搜尋...."/>
+      <input type="text" placeholder="請搜尋...." />
     </div>
   );
 };
