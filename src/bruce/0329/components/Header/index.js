@@ -55,12 +55,10 @@ const Header = () => {
             );
           })}
         </div>
-        <div className="box13 boxBorder"></div>
+        {/* <div className="box13 boxBorder"></div> */}
         <div className="box14 boxBorder">
           <div className="Name">John</div>
-          <div className="box143">
-            <Head />
-          </div>
+          <Head />
         </div>
       </div>
     </div>

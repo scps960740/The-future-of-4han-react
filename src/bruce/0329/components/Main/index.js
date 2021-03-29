@@ -4,6 +4,7 @@ import Menuhome from "./MenuhomeLogo";
 import Menu from "./MenuLogo";
 import Selector from "./Selector";
 import RwdMain from "./RWD";
+import Content from "./Content";
 
 const Main = () => {
   const defaultsSarchOption = {
@@ -34,6 +35,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <Content />
     </div>
   );
 };

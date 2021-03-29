@@ -6,7 +6,6 @@ body {
 
 .box1 {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   height: 70px;
   color: black;
@@ -25,13 +24,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5%;
+  width: 75px;
   color: black;
 }
 
 .LogoWidth {
   width: 38px;
-  height: 38px;
 }
 
 .LogoWidth > img {
@@ -44,6 +42,7 @@ body {
   align-items: center;
   width: 39%;
   border-left: 1px solid #d0d4db;
+  border-right: 1px solid #d0d4db;
 }
 .box13 {
   display: flex;
@@ -52,7 +51,11 @@ body {
 }
 .box14 {
   display: flex;
-  width: 19%;
+  width: 56%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 .box1Btn {
   display: flex;
@@ -83,10 +86,9 @@ body {
 }
 
 .Name {
-  font-size: 20px;
-  margin-left: 130px;
-  padding-top: 22px;
+  font-size: 16px;
   color: black;
+  margin-right: 15px;
 }
 
 .box143 {
@@ -102,8 +104,10 @@ body {
   margin-left: 50px;
 }
 .HeadWidth {
-  width: 100%;
-  height: 100%;
+  width: 48px;
+  height: 48px;
+  border-radius: 99px;
+  overflow: hidden;
 }
 
 .HeadWidth > img {
@@ -143,17 +147,34 @@ body {
   margin-right: 6px;
 }
 
+
 @media screen and (max-width: 765px) {
   .box1 {
     display: none;
   }
   .RWD {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 3px 7px 2px #e4e6fa;
+    height: 80px;
+  }
+  .RWDRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .RWDRightJohn {
+    margin-right: 15px;
   }
   .LogoWidth {
-    width: 46px;
-    height: 38px;
-    margin-top: 7px;
-    margin-left: 4px;
+    width: 40px;
+    margin-left: 5px;
+  }
+
+  .HeadWidth {
+    margin-right: 5px;
   }
 }
