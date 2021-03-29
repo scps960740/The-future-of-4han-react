@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./bruce/highspeed/pages/Home";
+import Home from "./John/highspeed/pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>

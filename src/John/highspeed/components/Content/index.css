@@ -1,0 +1,24 @@
+.box3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.noTittle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 40px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  margin-top: 12%;
+  color: #4f5050;
+}
+@media screen and (max-width: 765px){
+  .box3{
+    display: none;
+  }
+}
