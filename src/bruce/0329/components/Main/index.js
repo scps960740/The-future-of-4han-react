@@ -3,8 +3,10 @@ import "./index.css";
 import Menuhome from "./MenuhomeLogo";
 import Menu from "./MenuLogo";
 import Selector from "./Selector";
-import RwdMain from "./RWD";
 import Content from "./Content";
+import MySwiper from "./MySwiper";
+
+import { getTimeTableApi } from "../../global/constant";
 
 const Main = () => {
   const defaultsSarchOption = {
@@ -13,30 +15,52 @@ const Main = () => {
     mainEnd: "",
   };
 
+  const [timetableData, setTimetableData] = useState([]);
+
+  const [isCard, setIsCard] = useState(true);
   const [mainSearchOption, setMainSearchOption] = useState(defaultsSarchOption);
   useEffect(() => {
-    // TODO del
-    console.log("mainSearchOption", mainSearchOption);
+    const { mainDate, mainStart, mainEnd } = mainSearchOption;
+
+    if (mainDate === "" || mainStart === "" || mainEnd === "") {
+      return;
+    }
+
+    const api = getTimeTableApi(mainStart, mainEnd, mainDate);
+    fetch(api)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setTimetableData(data);
+      });
   }, [mainSearchOption]);
 
   return (
-    <div className="RwdMainClass">
-      <RwdMain />
-      <div className="box2">
-        <div className="box21">
-          <Selector setMainSearchOption={setMainSearchOption} />
-        </div>
-        <div className="box23">
-          <div className="box232">
-            <Menuhome />
-          </div>
-          <div className="box231">
-            <Menu />
+    <>
+      <div className="top">
+        <MySwiper />
+        <div className="boxWrapper">
+          <div className="box21">
+            <Selector tool={setMainSearchOption} />
           </div>
         </div>
+       
       </div>
-      <Content />
-    </div>
+      <div className="RwdMainClass">
+        <div className="box2">
+          <div className="box23">
+            <div className={isCard === true ? "menu menuBg" : "menu"}>
+              <Menuhome tool={setIsCard} />
+            </div>
+            <div className={isCard === false ? "menu menuBg" : "menu"}>
+              <Menu tool={setIsCard} />
+            </div>
+          </div>
+        </div>
+        <Content data={timetableData} isCard={isCard} />
+      </div>
+    </>
   );
 };
 

@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { STATION_API } from "../../global/constant";
 
-const Selector = ({ setMainSearchOption }) => {
+const Selector = ({ tool }) => {
   const [date, setDate] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
 
   const [allStation, setAllStation] = useState([]);
 
+  // 重點 call api
   useEffect(() => {
     fetch(STATION_API)
       .then((res) => {
@@ -37,11 +38,6 @@ const Selector = ({ setMainSearchOption }) => {
   }
 
   function searchEvent() {
-    setMainSearchOption({
-      mainDate: date,
-      mainStart: start,
-      mainEnd: end,
-    });
     if (date === "") {
       window.alert("請輸入日期");
       return;
@@ -54,6 +50,11 @@ const Selector = ({ setMainSearchOption }) => {
       window.alert("請輸入終點站");
       return;
     }
+    tool({
+      mainDate: date,
+      mainStart: start,
+      mainEnd: end,
+    });
   }
 
   return (
