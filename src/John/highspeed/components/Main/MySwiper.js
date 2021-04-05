@@ -22,11 +22,11 @@ const MySwiper = () => {
       slidesPerView={1}
       // navigation={true}
       pagination={{ clickable: true }}
-      // scrollbar={{ draggable: true }}
+      autoplay={true}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <div
           className="swiperContent"
           style={{
@@ -35,7 +35,7 @@ const MySwiper = () => {
         >
           <div className="mask"></div>
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
       <SwiperSlide>
         <div
           className="swiperContent"

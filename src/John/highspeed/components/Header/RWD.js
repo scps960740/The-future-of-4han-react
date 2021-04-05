@@ -3,6 +3,7 @@ import "./index.css";
 import ClockLogo from "./ClockLogo";
 import Head from "./HeadLogo";
 import Menu from "../../Images/menu.svg";
+import Close from "../../Images/close.svg";
 import Btn from "./Btn";
 
 const RWD = () => {
@@ -10,26 +11,26 @@ const RWD = () => {
 
   const btnGroup = [
     {
-      name: "HOME",
+      name: "首頁",
       linkhref: "/index.html",
       class: "box121 box1Btn",
       target: "",
     },
     {
-      name: "OFFCIAL",
+      name: "高鐵官方",
       linkhref: "https://www.thsrc.com.tw/",
       class: "box122 box1Btn",
       target: "_blank",
     },
     {
-      name: "API1",
+      name: "車站API文件",
       linkhref:
         "https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_Station",
       class: "box123 box1Btn",
       target: "_blank",
     },
     {
-      name: "API2",
+      name: "時間表API文件",
       linkhref:
         "https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_ODDailyTimetable",
       class: "box124 box1Btn",
@@ -56,8 +57,7 @@ const RWD = () => {
         </div>
         <div className={API === false ? "RWDLink" : "RWDLink RWDLinkPosition"}>
           <div className="RWDLinkTittle">
-            相關資料
-            <img onClick={RwdOut} src={Menu} />
+            <img onClick={RwdOut} src={Close} />
           </div>
 
           <a
@@ -65,28 +65,28 @@ const RWD = () => {
             target="_blank"
             href="/index.html"
           >
-            HOME
+            首頁
           </a>
           <a
             className="box224 linkSize box2Btn"
             target="_blank"
             href="https://www.thsrc.com.tw/"
           >
-            OFFCIAL
+            高鐵官方
           </a>
           <a
             className="box224 linkSize box2Btn"
             target="_blank"
             href="https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_Station"
           >
-            API1
+            車站API文件
           </a>
           <a
             className="box224 linkSize box2Btn"
             target="_blank"
             href="https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_ODDailyTimetable"
           >
-            API2
+            時間表API文件
           </a>
         </div>
       </div>

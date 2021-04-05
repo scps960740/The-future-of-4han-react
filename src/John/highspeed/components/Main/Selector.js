@@ -62,7 +62,7 @@ const Selector = ({ tool }) => {
       <input className="box211" type="date" value={date} onChange={dateEvent} />
       <div className="box211">
         <select value={start} onChange={startEvent}>
-          <option value="">請選擇</option>
+          <option value="">選擇啟程站</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
@@ -76,7 +76,7 @@ const Selector = ({ tool }) => {
 
       <div className="box211">
         <select value={end} onChange={endEvent}>
-          <option value="">請選擇</option>
+          <option value="">選擇終點站</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
