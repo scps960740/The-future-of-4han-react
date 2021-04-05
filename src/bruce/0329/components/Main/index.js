@@ -45,7 +45,6 @@ const Main = () => {
             <Selector tool={setMainSearchOption} />
           </div>
         </div>
-       
       </div>
       <div className="RwdMainClass">
         <div className="box2">

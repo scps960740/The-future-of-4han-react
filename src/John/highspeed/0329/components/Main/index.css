@@ -1,0 +1,215 @@
+.box2 {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  height: 75px;
+  padding-top: 40px;
+}
+.box21 {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  background-color: #f3f3f39c;
+  padding: 27px;
+  border-radius: 11px;
+}
+
+.boxWrapper {
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box211 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  color: #4f5050;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 20px;
+  width: 165px;
+  border: 0;
+  outline: none;
+}
+.box211 > select {
+  outline: none;
+}
+
+.box211 > select {
+  width: 100%;
+  border: none;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.box23 {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #f5f7fc;
+  border-radius: 10px;
+}
+.buttonStation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 0;
+  height: 50px;
+  width: 65px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3957f2;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.menuBg {
+  background: #3957f2;
+  box-shadow: 1px 3px 5px 2px #edeefa;
+}
+
+.buttonChange {
+  height: 30px;
+  width: 30px;
+}
+
+.buttonChange > img {
+  width: 100%;
+}
+
+.RWDMain {
+  display: none;
+}
+
+.card {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 30px;
+  border-bottom: 5px solid #e4e4e4;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.swiperContent {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0000003a;
+}
+
+.top {
+  position: relative;
+  z-index: 0;
+}
+
+@media screen and (max-width: 765px) {
+  .box21 {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .box2 {
+    height: auto;
+    padding: 0;
+  }
+  .box23 {
+    display: none;
+  }
+  .box3 {
+    margin-top: 100px;
+  }
+  .box211 {
+    padding-left: 10px;
+    margin-right: 35px;
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .buttonStation {
+    margin-top: 30px;
+  }
+  .boxWrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .boxTittlerevision {
+    box-sizing: border-box;
+    width: 100px;
+    justify-content: center;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+.page {
+  margin-top: 50px;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.pageButton {
+  height: 30px;
+  width: 80px;
+  box-sizing: border-box;
+  margin-left: 25px;
+  margin-right: 15px;
+  border: 0;
+  outline: none;
+}
+
+.cardClass {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.boxTittle {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  border-bottom: 1px solid rgb(224 222 222);
+}
+
+.boxTittlerevision {
+  box-sizing: border-box;
+  width: 100px;
+  justify-content: center;
+  display: flex;
+}
