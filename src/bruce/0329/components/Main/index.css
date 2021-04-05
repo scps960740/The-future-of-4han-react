@@ -161,4 +161,7 @@
     padding-right: 15px;
     box-sizing: border-box;
   }
+  .top {
+    z-index: -1;
+  }
 }

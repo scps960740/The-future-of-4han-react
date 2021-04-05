@@ -1,0 +1,30 @@
+.box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+  margin-top: 27px;
+}
+.noTittle {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  color: #4f5050;
+}
+
+.nodata {
+  width: 48px;
+}
+
+.nodata img {
+  width: 100%;
+}
+
+@media screen and (max-width: 765px) {
+}
