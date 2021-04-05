@@ -2,28 +2,29 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { STATION_API } from "../../global/constant";
 
-const Selector = ({ setMainSearchOption }) => {
+const Selector = ({ tool }) => {
   const [date, setDate] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
 
   const [allStation, setAllStation] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(STATION_API)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       const newdata = data.map((item) => {
-  //         return {
-  //           StationName: item.StationName.Zh_tw,
-  //           StationID: item.StationID,
-  //         };
-  //       });
-  //       setAllStation(newdata);
-  //     });
-  // }, []);
+  // 重點 call api
+  useEffect(() => {
+    fetch(STATION_API)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const newdata = data.map((item) => {
+          return {
+            StationName: item.StationName.Zh_tw,
+            StationID: item.StationID,
+          };
+        });
+        setAllStation(newdata);
+      });
+  }, []);
 
   function dateEvent(e) {
     setDate(e.target.value);
@@ -37,11 +38,6 @@ const Selector = ({ setMainSearchOption }) => {
   }
 
   function searchEvent() {
-    setMainSearchOption({
-      mainDate: date,
-      mainStart: start,
-      mainEnd: end,
-    });
     if (date === "") {
       window.alert("請輸入日期");
       return;
@@ -54,20 +50,19 @@ const Selector = ({ setMainSearchOption }) => {
       window.alert("請輸入終點站");
       return;
     }
+    tool({
+      mainDate: date,
+      mainStart: start,
+      mainEnd: end,
+    });
   }
 
   return (
     <>
-      <div>
-        <input
-          className="box211"
-          type="date"
-          value={date}
-          onChange={dateEvent}
-        ></input>
-      </div>
-      <div>
-        <select className="box211" value={start} onChange={startEvent}>
+      <input className="box211" type="date" value={date} onChange={dateEvent} />
+      <div className="box211">
+        <select value={start} onChange={startEvent}>
+          <option value="">請選擇</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
@@ -79,8 +74,9 @@ const Selector = ({ setMainSearchOption }) => {
         </select>
       </div>
 
-      <div>
-        <select className="box211" value={end} onChange={endEvent}>
+      <div className="box211">
+        <select value={end} onChange={endEvent}>
+          <option value="">請選擇</option>
           {allStation.map((item) => {
             return (
               <option key={item.StationID} value={item.StationID}>
