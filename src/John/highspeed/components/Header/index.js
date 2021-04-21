@@ -8,26 +8,26 @@ import Rwd from "./RWD";
 const Header = () => {
   const btnGroup = [
     {
-      name: "HOME",
+      name: "首頁",
       linkhref: "/index.html",
       class: "box121 box1Btn",
       target: "",
     },
     {
-      name: "OFFCIAL",
+      name: "高鐵官方",
       linkhref: "https://www.thsrc.com.tw/",
       class: "box122 box1Btn",
       target: "_blank",
     },
     {
-      name: "API1",
+      name: "車站API文件",
       linkhref:
         "https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_Station",
       class: "box123 box1Btn",
       target: "_blank",
     },
     {
-      name: "API2",
+      name: "時間表API文件",
       linkhref:
         "https://ptx.transportdata.tw/MOTC?t=Rail&v=2#!/THSR/THSRApi_ODDailyTimetable",
       class: "box124 box1Btn",

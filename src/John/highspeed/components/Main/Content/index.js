@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import train from "../../../Images/train.png";
+import rightArrow from "../../../Images/rightArrow.svg";
 import Card from "./Card";
 import { chunk } from "lodash";
 
@@ -89,15 +90,17 @@ const Content = ({ data, isCard }) => {
         })
       )} */}
       {renderContent()}
-      <div className="page">
-        <button className="pageButton" onClick={prev}>
-          上一頁
+      {newdata.length !== 0 && <div className="page">
+        <button className="pageButton pageButtonLeft" onClick={prev}>
+        <img src={rightArrow} />
+          較早班次 
         </button>
-        <button className="pageButton" onClick={next}>
-          下一頁
+        <button className="pageButton pageButtonRight" onClick={next}>
+          較晚班次
+          <img src={rightArrow} />
         </button>
-        <p>目前在：第{page + 1}頁</p>
-      </div>
+        {/* <p>第{page + 1}頁</p> */}
+      </div>}
     </>
   );
 };
